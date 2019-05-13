@@ -1,5 +1,5 @@
 /// <reference path="./node_modules/tns-platform-declarations/android.d.ts" />
-import * as Application from "application"
+import * as Application from "tns-core-modules/application"
 import definition = require("./downloadmanager");
 
 export enum notificationVisibility {
