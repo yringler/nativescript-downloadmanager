@@ -11,7 +11,7 @@ export class DownloadManager {
 	download(url: string, options: DownloadOptions, callBack: Function) {
 		NSURLSession.sharedSession.downloadTaskWithURLCompletionHandler(new NSURL({ string: url }), (tmpOut, _, error) => {
 
-			let outUrl = `file://${toUrlPath(knownFolders.documents().path)}/${toUrlPath(options.directory)}/${options.filename}`;
+			const outUrl = `file://${toUrlPath(knownFolders.documents().path)}/${toUrlPath(options.directory)}/${options.filename}`;
 
 			if (error != null) {
 				callBack(false, null);
